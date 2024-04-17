@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+const product = [
+{ 
+  id: 0,
+  image: 'C:\Users\HP PRO\Documents\Kroger pharmacy\Pics.jpg',
+  title: 'Z Flip Foldable Mobile',
+  price: 120,
+},
+{
+    id: 1,
+  image: 'image/ee-99.jpg',
+  title: 'Z Flip Foldable Mobile',
+  price: 120,
+}
+{
+  id: 2
+  image: 'image/ee-99.jpg',
+  title: 'Z Flip Foldable Mobile',
+  price: 120,
+}
+];
+const categories = [
+  (product.map((item)=>
+    {return item})
+    let 1=0;
+  })]
+
+document.getElementById('root').innerHTML = catergories.map((item)=>
+{
+  var {image, title, price} = item;
+  return(
+    <div class='box'>
+     <div class='img-box'>
+      <img class='images' src=${image}></img>
+      </div>
+      <div class='botton'>
+      <p>${title}</p>
+      <h2>$ ${price}.00</h2> +
+      " button on click='addtocart("+(i++)+")'>Add to Cart</button>"+
+      </div>
+      </div>
+
+      )
+}).join('')
+
+const AddToCard=[];
+
+function addtocart(item,cart){
+  cart.push({...categories[]});
+  displaycart();
+}
+function delElement(a){
+  cart.spile(a, 1);
+  displaycart();
+}
+
+function displaycart(a) {
+  let j = 0; total=0;
+  document.getElementById('count').innerHTML=cart.lenght;
+  if(cart.lenght==0){
+    document.getElementById('cartitem').innerHTML = "Your cart is empty";
+    document.getElementById("total").innerHTML = "$ "+0+".00";
+  }
+  else{
+    document.getElementById('cartitem').innerHTML = cart.map((item)=>
+    {
+      var {image, title, price} = items;
+      total=total+price;
+      document.getElementById("total").innerHTML = "$ "+total+".00";
+      return(
+                 <div class='cart-item'>
+                 <div class='row-item'>
+                     <img class='rowing' src=${image}>
+                     </div>
+                     <p style='font-size:12px;'>${tittle}</p>
+                     <h2 style='font-size: 15px;'>${price}.00</h2>+
+                     "<i class= 'fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+        );
+    }).join('');
+  }
+}
+</script>
+  <script src="http://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style type="text/css">
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.header{
+  height: 80px;
+  width: 70%;
+  background-color: darkgoldenrod;
+  border-radius: 3px;
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.header .logo{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.cart{
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 3px;
+  width: 80px;
+}
+.fa-solid{
+  color: goldenrod;
+}
+.cart p{
+  height: 22px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background-color: goldenrod;
+  color: white;
+}
+.container{
+  display: flex;
+  width: 70%;
+  margin border-bottom: 30px;
+
+}
+#root{ 
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.sidebar{
+  width: 40%;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-left: 20px;
+  padding: 15px;
+  text-align: center;
+}
+.head{
+  background-color: goldenrod;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+.foot{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-top: 1px solid#333;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid goldenrod;
+  border-radius: 5px;
+  padding: 15px;
+}
+.img-box{
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images{
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+.bottom{
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+h2{
+  font-size: 20px;
+  color: red;
+}
+button{
+  width: 100%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: goldenrod;
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+}
+button:hover{
+  background-color: #333;
+}
+
+.cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 10px 10px;
+}
+.row.image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid goldenrod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rowimg{
+  max-width: 43px;
+  max-height: 43px;
+  border-radius: 50%;
+}
+.fa-trash:hover{
+  cursor: pointer;
+  color: #333;
+}
+
+</style>
+<body> 
+
+  <div class="header">
+  <p class="logo">Logo</p>
+  <div class="cart"><i class="fa-solid fa-cart-plus"></i><p id="count">0</p></div></div>
+
+
+<div class="container">
+  <div id="root"></div>
+  <div class="sidebar">
+    <div class="head"><p>My cart</p></div>
+    <div id="cartitem">Your cart is empty</div>
+    <div class="foot">
+      <h3>Total</h3>
+      <h2 id="total">$ 0.00</h2>
+    </div>
+  </div>
+</div>
+
+<script src="addtocart.js"></script>
+
+</body>
+</html>
